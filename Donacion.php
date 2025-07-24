@@ -2,8 +2,8 @@
 require_once 'config.php';
 class Donacion {
     private static function conectar() {
-        global $host, $dbname, $user, $password;
-        return new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
+        global $host,$port, $dbname, $user, $password;
+        return new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     }
     public static function obtenerTodas() {
         $db = self::conectar();

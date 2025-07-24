@@ -14,7 +14,7 @@ if (!isset($_SESSION['ip_address']) || $_SESSION['ip_address'] !== $_SERVER['REM
 }
 require_once 'config.php';
 try {
-    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
+    $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if (
         empty($_POST['nombre']) || empty($_POST['fecha']) ||

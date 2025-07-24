@@ -2,9 +2,9 @@
 require_once 'config.php';
 class Proyecto {
     private static function conectar() {
-        global $host, $dbname, $user, $password;
+        global $host,$port, $dbname, $user, $password;
         try {
-            return new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
+            return new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
         } catch (PDOException $e) {
             die("Error de conexión: " . $e->getMessage());
         }
