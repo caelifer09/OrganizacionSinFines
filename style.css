@@ -1,0 +1,17 @@
+.search-container { 
+    text-align: center; 
+    -top: 20px; 
+}
+#results-container { 
+    margin-top: 20px; 
+}
+.notification-area {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1050;
+    width: 300px;
+}
+.notification {
+    margin-bottom: 0.5rem;
+}
